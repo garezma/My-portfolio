@@ -15,58 +15,33 @@
             
             <div class="wrapper">
                 <nav>
-                    <!--<input type="checkbox" id="show-search">-->
                     <input type="checkbox" id="show-menu">
                     <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
                     <div class="content">
                       <!--LOGO-->
                     <div class="logo">
-                        <p class="logo-p">GAREZMA DEV</p>
+                        <p class="logo-p"><a href="#">GAREZMA DEV</a></p>
                     </div>
                       <!--LINKS-->
                       <ul class="links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="#welcome-section">About</a></li>
+                        <li><a href="#offer-section">Services</a></li>
                         <li>
-                          <a href="#" class="desktop-link">Features</a>
+                          <a href="#projects" class="desktop-link">Porfolio</a>
                           <input type="checkbox" id="show-features">
-                          <label for="show-features">Features</label>
+                          <label for="show-features">Porfolio</label>
                           <ul>
-                            <li><a href="#">Drop Menu 1</a></li>
-                            <li><a href="#">Drop Menu 2</a></li>
-                            <li><a href="#">Drop Menu 3</a></li>
-                            <li><a href="#">Drop Menu 4</a></li>
+                            <li><a href="#nav-link-1">TRIBUTE PAGE</a></li>
+                            <li><a href="#nav-link-2">RANDOM QUOTE MACHINE</a></li>
+                            <li><a href="#nav-link-3">JAVASCRIPT CALCULATOR</a></li>
+                            <li><a href="#nav-link-4">MAP DATA ACROSS THE GLOBE</a></li>
+                            <li><a href="#nav-link-5">WIKIPEDIA VIEWER</a></li>
+                            <li><a href="#nav-link-6">TIC TAC TOE GAME</a></li>
                           </ul>
                         </li>
-                        <li>
-                          <a href="#" class="desktop-link">Services</a>
-                          <input type="checkbox" id="show-services">
-                          <label for="show-services">Services</label>
-                          <ul>
-                            <li><a href="#">Drop Menu 1</a></li>
-                            <li><a href="#">Drop Menu 2</a></li>
-                            <li><a href="#">Drop Menu 3</a></li>
-                            <li>
-                              <a href="#" class="desktop-link">More Items</a>
-                              <input type="checkbox" id="show-items">
-                              <label for="show-items">More Items</label>
-                              <ul>
-                                <li><a href="#">Sub Menu 1</a></li>
-                                <li><a href="#">Sub Menu 2</a></li>
-                                <li><a href="#">Sub Menu 3</a></li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#contact">contact</a></li>
                       </ul>
                     </div>
-                    <!--SEARCH
-                    <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
-                    <form action="#" class="search-box">
-                      <input type="text" placeholder="Type Something to Search..." required>
-                      <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
-                    </form>-->
                     <div class="dark-mode-div">
                         <label>
                             <input class='toggle-checkbox' type='checkbox' onclick="document.documentElement.classList.toggle('dark-mode')" checked></input>
@@ -83,117 +58,120 @@
                     </div>
                 </nav>
             </div>
-
-
-
-
         </header>
-        <section id="welcome-section" class="welcome-section">    
-            <h1>Hey, I am Max Garcia</h1>
-            <p>a web developer</p>
-            <span>"If you can imagine, you can design"</span>
+        <section id="welcome-section" class="welcome-section">
+            <div class="welcome-image">
+                <img src="./img/avatar.png" alt="avatar">   
+
+            </div>
+            <div class="welcome-text">
+                <h1>Hey, I am Max Garcia</h1>
+                <p>a web developer</p>
+                <span>"If you can imagine, you can design"</span>
+            </div>
         </section>
-        <div class="slider">
-          <div class="slide-track">
-              <div class="slide">
-                  <img src="img/html.png" height="100" width="100" alt="">
-              </div>
-              <div class="slide">
-                  <img src="img/css.png" height="100" width="100" alt="">
-              </div>
-              <div class="slide">
-                  <img src="img/js.png" height="100" width="100" alt="">
-              </div>
-              <div class="slide">
-                  <img src="img/bootstrap.png" height="100" width="100" alt="">
-              </div>
-              <div class="slide">
-                  <img src="img/node.png" height="100" width="100" alt="">
-              </div>
-              <div class="slide">
-                  <img src="img/sass.png" height="100" width="100" alt="">
-              </div>
-              <div class="slide">
-                  <img src="img/php.png" height="100" width="100" alt="">
-              </div>
-              <div class="slide">
-                  <img src="img/react.png" height="100" width="100" alt="">
-              </div>
-              <div class="slide">
-                  <img src="img/git.png" height="100" width="100" alt="">
-              </div>
-              <div class="slide">
-                  <img src="img/html.png" height="100" width="100" alt="">
-              </div>
-              <div class="slide">
-                  <img src="img/css.png" height="100" width="100" alt="">
-              </div>
-              <div class="slide">
-                  <img src="img/js.png" height="100" width="100" alt="">
-              </div>
-              <div class="slide">
-                  <img src="img/bootstrap.png" height="100" width="100" alt="">
-              </div>
-              <div class="slide">
-                  <img src="img/node.png" height="100" width="100" alt="">
-              </div>
-              <div class="slide">
-                  <img src="img/sass.png" height="100" width="100" alt="">
-              </div>
-              <div class="slide">
-                  <img src="img/php.png" height="100" width="100" alt="">
-              </div>
-          </div>
-        </div>
         <section id="offer-section">
             <div class="container-section">
-                <h2 class="h2-offer">WE CAN DESIGN YOUR NEXT WEB PAGE OR REDESIGN YOUR CURRENT PAGE</h2>
-                <p class="p-offer">More than 5 years designing web pages</p>
-                <section class="design-section">
+                <h2 class="h2-offer shadow-efect">I CAN DESIGN YOUR NEW WEB OR REDESIGN YOUR CURRENT PAGE</h2>
+                <p class="p-offer shadow-efect">More than 5 years designing web pages</p>
+                <section class="design-section shadow-efect">
                         <div class="block-offer">
-                            <img src="img/img1.png" alt="IMAGE WEB DESIGN">
                             <p class="title-p-image-offer">WEB DESIGN AND PROGRAMING</p>
+                            <img src="img/img1.png" alt="IMAGE WEB DESIGN">
                             <p class="content-image-offer">Professional Web Design for companies, professionals, shops, factories, service providers, institutional pages, professionals, e-commerce, online stores</p>
                         </div>
                         <div class="block-offer">
-                            <img src="img/img2.png" alt="MOBILE CONTENT">
                             <p class="title-p-image-offer">MOBILE DESIGN</p>
+                            <img src="img/img2.png" alt="MOBILE CONTENT">
                             <p class="content-image-offer">Mobile and tablet friendly designs, self-managed, search engine optimized (SEO)</p>
                         </div>
                 </section>
             </div>
         </section>
         <section id="projects">
-            <div class="container-section project-background">
-                <h2 class="projects-title">These are some of my projects</h2>
-                <div id="project-grid">
-                  <a href="https://codepen.io/freeCodeCamp/full/zNqgVx" target="_blank" class="project project-tile">
+            <div class="container-section">
+                <h2 class="projects-title shadow-efect">U can see my Portfolio</h2>
+                <p class="p-offer shadow-efect">Here are some of my proyects. Enjoy them!</p>
+                <div id="project-grid" class="shadow-efect">
+                  <a href="https://codepen.io/freeCodeCamp/full/zNqgVx" target="_blank" class="project project-tile" id="nav-link-1">
                     <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="project"/>
                     <span class="project-button">Tribute Page</span>
                   </a>
-                  <a href="https://codepen.io/freeCodeCamp/full/qRZeGZ" target="_blank" class="project">
+                  <a href="https://codepen.io/freeCodeCamp/full/qRZeGZ" target="_blank" class="project" id="nav-link-2">
                     <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png" alt="project"/>
                     <span class="project-button">Random Quote Machine</span>
                   </a>
-                  <a href="https://codepen.io/freeCodeCamp/full/wgGVVX" target="_blank" class="project">
+                  <a href="https://codepen.io/freeCodeCamp/full/wgGVVX" target="_blank" class="project" id="nav-link-3">
                     <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png" alt="project"/>
-                      <span class="project-button">JavaScript Calculator</span>                      
+                      <span class="project-button" >JavaScript Calculator</span>                      
                   </a>
-                  <a href="https://codepen.io/freeCodeCamp/full/mVEJag" target="_blank" class="project">
+                  <a href="https://codepen.io/freeCodeCamp/full/mVEJag" target="_blank" class="project" id="nav-link-4">
                    <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg" alt="project"/>
-                   <span class="project-button">Map Data Across the Globe</span>
+                   <span class="project-button" >Map Data Across the Globe</span>
                   </a>
-                  <a href="https://codepen.io/freeCodeCamp/full/wGqEga" target="_blank" class="project">
+                  <a href="https://codepen.io/freeCodeCamp/full/wGqEga" target="_blank" class="project" id="nav-link-5">
                     <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/wiki.png" alt="project"/>
                     <span class="project-button">Wikipedia Viewer</span>
                   </a>
-                  <a href="https://codepen.io/freeCodeCamp/full/KzXQgy" target="_blank" class="project">
+                  <a href="https://codepen.io/freeCodeCamp/full/KzXQgy" target="_blank" class="project" id="nav-link-6">
                     <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png" alt="project"/>
                     <span class="project-button">Tic Tac Toe Game</span>
                   </a>                    
                 </div>                  
             </div>
         </section>
+        <div class="slider">
+          <div class="slide-track">
+              <div class="slide">
+                  <img src="img/html.png" height="100" width="100" alt="html-icon">
+              </div>
+              <div class="slide">
+                  <img src="img/css.png" height="100" width="100" alt="css-icon">
+              </div>
+              <div class="slide">
+                  <img src="img/js.png" height="100" width="100" alt="js-icon">
+              </div>
+              <div class="slide">
+                  <img src="img/bootstrap.png" height="100" width="100" alt="bs-icon">
+              </div>
+              <div class="slide">
+                  <img src="img/node.png" height="100" width="100" alt="node-icon">
+              </div>
+              <div class="slide">
+                  <img src="img/sass.png" height="100" width="100" alt="sass-icon">
+              </div>
+              <div class="slide">
+                  <img src="img/php.png" height="100" width="100" alt="php-icon">
+              </div>
+              <div class="slide">
+                  <img src="img/react.png" height="100" width="100" alt="react-icon">
+              </div>
+              <div class="slide">
+                  <img src="img/git.png" height="100" width="100" alt="git-icon">
+              </div>
+              <div class="slide">
+                  <img src="img/html.png" height="100" width="100" alt="html-icon">
+              </div>
+              <div class="slide">
+                  <img src="img/css.png" height="100" width="100" alt="css-icon">
+              </div>
+              <div class="slide">
+                  <img src="img/js.png" height="100" width="100" alt="js-icon">
+              </div>
+              <div class="slide">
+                  <img src="img/bootstrap.png" height="100" width="100" alt="bs-icon">
+              </div>
+              <div class="slide">
+                  <img src="img/node.png" height="100" width="100" alt="node-icon">
+              </div>
+              <div class="slide">
+                  <img src="img/sass.png" height="100" width="100" alt="sass-icon">
+              </div>
+              <div class="slide">
+                  <img src="img/php.png" height="100" width="100" alt="php-icon">
+              </div>
+          </div>
+        </div>
         <section id="contact">
             <div class="container-section">
               <h2 class="contact-title">Let´s work together...</h2>
@@ -203,7 +181,7 @@
                 <a href="https://facebook.com/" target="_blank" class="btn contact-detail"><i class="fab fa-facebook-square"></i> Facebook</a>
                 <a href="https://twitter.com/" target="_blank" class="btn contact-detail" ><i class="fab fa-twitter"></i> Twitter</a>
                 <a href="mailto:garezmadev@gmail.com" class="btn contact-detail"><i class="fas fa-at"></i>Email</a>
-                <a href="tel:+541126678451" class="btn contact-detail"><i class="fas fa-mobile-alt"></i> Call me</a>
+                <a href="https://t.me/garezma" target="_blank" class="btn contact-detail"><i class="fa-brands fa-telegram"></i> Telegram</a>
               </div> 
             </div>
         </section>

@@ -35,18 +35,30 @@ body {
   background: var(--background);
 }
 
+.shadow-efect {
+  box-shadow: 5px 5px 10px 1px #636262;
+}
 
-.container {
-  /*width: 100%;*/
-  margin: 0 auto;
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 .container-section {
   width: 90%;
   margin: auto;
   margin-top: 5%;
-  border-radius: 2%;
+  border-radius: 22px;
 }
+
+
 /*END GENERAL RULES*/
 
 /*NEW DARK MODE WITH FILTER INVERT*/
@@ -169,11 +181,12 @@ nav .content .links{
 .content .logo a{
   color: #fff;
   font-size: 30px;
-  font-weight: 600;
+  background: none;
 }
+
 .content .links li{
   list-style: none;
-  line-height: 70px;
+  line-height: 63px;
 }
 .content .links li a,
 .content .links li label{
@@ -191,7 +204,7 @@ nav .content .links{
 .content .links li label:hover{
   background: #323c4e;
 }
-.wrapper .search-icon,
+
 .wrapper .menu-icon{
   color: #fff;
   font-size: 30px;
@@ -201,49 +214,7 @@ nav .content .links{
 .wrapper .menu-icon{
   display: none;
 }
-.wrapper #show-search:checked ~ .search-icon i::before{
-  content: "\f00d";
-}
-.wrapper .search-box{
-  position: absolute;
-  height: 100%;
-  max-width: calc(100% - 50px);
-  width: 100%;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-.wrapper #show-search:checked ~ .search-box{
-  opacity: 1;
-  pointer-events: auto;
-}
-.search-box input{
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-  font-size: 17px;
-  color: #fff;
-  background: #171c24;
-  padding: 0 100px 0 15px;
-}
-.search-box input::placeholder{
-  color: #f2f2f2;
-}
-.search-box .go-icon{
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  line-height: 60px;
-  width: 70px;
-  background: #171c24;
-  border: none;
-  outline: none;
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-}
+
 .wrapper input[type="checkbox"]{
   display: none;
 }
@@ -251,13 +222,13 @@ nav .content .links{
 .content .links ul{
   position: absolute;
   background: #171c24;
-  top: 80px;
+  top: 85px;
   z-index: -1;
   opacity: 0;
   visibility: hidden;
 }
 .content .links li:hover > ul{
-  top: 70px;
+  top: 75px;
   opacity: 1;
   visibility: visible;
   transition: all 0.3s ease;
@@ -294,12 +265,7 @@ nav .content .links{
   .content .links li a{
     padding: 8px 13px;
   }
-  .wrapper .search-box{
-    max-width: calc(100% - 100px);
-  }
-  .wrapper .search-box input{
-    padding: 0 100px 0 15px;
-  }
+
 }
 @media screen and (max-width: 750px){
 
@@ -374,16 +340,6 @@ nav .content .links{
   .content .logo a{
     font-size: 27px;
   }
-  .wrapper .search-box{
-    max-width: calc(100% - 70px);
-  }
-  .wrapper .search-box .go-icon{
-    width: 30px;
-    right: 0;
-  }
-  .wrapper .search-box input{
-    padding-right: 30px;
-  }
 }
 
 /*NEW NAVBAR*/
@@ -423,46 +379,14 @@ nav .content .links{
     padding: 2rem;
     display: block;
   }
-
-  nav a:hover{
-    background-color: white;
-    color:black;
-  }
-
-  nav {
-    font-weight: 400;
-    display: flex;
-    justify-content: flex-end;
-    top:0;
-  }
-  
-  nav > ul {
-    width: 45vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
 .logo {
     margin-left: 0%;
     margin-right: auto;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
 .logo-p {
     text-align: center;
-    font-family: 'Rubik Dirt', cursive;
+    font-family: 'Rubik Dirt', cursive!important;
     font-size: 30px;
     color: var(--allways-white-color);
 }
@@ -472,14 +396,24 @@ nav .content .links{
   /*WELCOME SECTION*/
   .welcome-section {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+    align-content: center;
     width: 100%;
-    height: 60vh;
+    height: 20rem;
     flex-direction: column;
     flex-wrap: wrap;
     }
 
+.welcome-text {
+  margin-top: 7rem;
+  text-align: end;
+}
+
+.welcome-image img {
+  width: 16rem;
+  margin-top: 8rem;
+}
   .welcome-section h1 {
     color: var(--font-color);
     font-size: 50px;
@@ -490,7 +424,6 @@ nav .content .links{
     background: var(--gradient-text);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-    padding-left: 280px;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -502,7 +435,6 @@ nav .content .links{
     font-family: monospace;
     font-style: italic;
     font-size: 20px;
-    margin-left: 10%;
     }
 
     /*SLIDER PROGRAM LANGUAGE*/
@@ -579,9 +511,21 @@ nav .content .links{
     /*END SLIDER PL*/
 
     /*OFFER SECTION*/
+
     #offer-section {
-      display: flex;
-      width: 100%;
+      animation: myAnim 1s ease 0s 1 normal forwards;
+    }
+
+    @keyframes myAnim {
+      0% {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+    
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
     .h2-offer {
@@ -590,10 +534,10 @@ nav .content .links{
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding: 0.5rem 1rem;
     text-align: center;
     background-color: var(--purple-color);
+    border-radius: 22px 22px 0 0;
     }
     .p-offer {
       background-color: var(--background-invert);
@@ -608,9 +552,10 @@ nav .content .links{
     .design-section {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
         background-color: var(--purple-color);
         margin-top: 1%;
+        border-radius: 0 0 22px 22px;
     }
 
     .block-offer {
@@ -618,7 +563,7 @@ nav .content .links{
       flex-direction: column;
       align-items: center;
       text-align: center;
-      margin: 10px;
+      margin: 0 1rem 1rem;
       width: 40%;
     }
 
@@ -629,46 +574,63 @@ nav .content .links{
     .title-p-image-offer {
       color: var(--allways-lgray-color);
       font-size: 22px;
+      padding: 1rem 1rem 0 1rem;
     }
 
     .content-image-offer {
       color: var(--allways-white-color);
       font-size: 18px;
       margin-top: 1rem;
+      text-align: justify;
     }
 
 /*PROJECTS SECTION*/
+
+#projects {
+  animation: myAnim2 1s ease 0s 1 normal forwards;
+}
     .projects {
       display: flex;
       width: 100%;
     }
 
-    .project-background {
-      background-color: var(--purple-color);
+    @keyframes myAnim2 {
+      0% {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+    
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
     .projects-title {
       color: var(--allways-lgray-color);
       font-size: 2rem;
       text-align: center;
-      background-color: var(--purple-color);
-      margin-bottom: 1%;
+      background: var(--purple-color);
+      border-radius: 22px 22px 0 0;
     }
 
     #project-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       grid-gap: 4rem;
-      width: 96%;
+      width: 100%;
       max-width: 1280px;
-      margin: 0 2% 0 2%;
-      margin-bottom: 6rem;
+      padding: 1rem 1rem;
+      background: var(--purple-color);
+      border-radius: 0 0 22px 22px;
+      margin-top: 1%;
     }
 
     .project-button {
       display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
       z-index: 1;
       text-decoration: none;
       text-transform: uppercase;
@@ -800,7 +762,7 @@ hr {
   /*MEDIA QUERIES*/
   @media (max-width: 1050px) {
     .h2-offer{
-      font-size: 1.3rem;
+      font-size: 1.2rem;
     }
   }
   @media (max-width: 860px) {
@@ -814,14 +776,22 @@ hr {
         margin: 0;
         font-size: 13px;
       }
-    
+
+      .welcome-section {
+        flex-wrap: nowrap;
+        height: 25rem;
+      }
+    .welcome-image img {
+      width: 10rem;
+      margin-top: 7rem;
+    }
+    .welcome-text {
+      margin-top: 0;
+    }
     .slider {
       margin-top: 3rem;
     }
     
-    .h2-offer{
-      font-size: 1rem;
-    }
     .design-section {
       flex-direction: column;
       align-items: center;
@@ -832,11 +802,22 @@ hr {
     .block-offer img {
       width: 80%;
     }
+
+    .title-p-image-offer {
+      padding: 1rem 2rem 0 2rem;
+    }
+
+    .content-image-offer {
+      padding: 1rem 4rem;
+    }
   }
 
   @media (max-width: 750px) {
     .logo-p {
       font-size: 2.1rem;
+    }
+    .container-section {
+      width: 98%;
     }
   }
   @media (max-width: 650px) {
@@ -868,12 +849,7 @@ hr {
       width: 17px;
       height: 17px;
     }
-    .welcome-section {
-      height: 50vh;
-    }
-    .welcome-section p {
-      padding-left: 280px;
-    }
+
 
     .welcome-section span {
     font-size: 17px;
@@ -883,10 +859,6 @@ hr {
       margin-top: 2rem;
     }
 
-    .content-image-offer {
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
     #contact-links {
       flex-wrap: nowrap;
       flex-direction: column;
@@ -901,18 +873,23 @@ hr {
     .welcome-section h1 {
       font-size: 40px;
     }
-    .welcome-section p {
-      padding-left: 175px;
-    }
+
     .welcome-section span {
       font-size: 15px;
-      margin-left: 15%;
       }
       .contact-title {
         font-size: 2.5rem;
       }
       .contact-p {
         font-size: 1.2rem;
+      }
+
+      .welcome-section {
+        height: 24rem;
+      }
+
+      .content-image-offer {
+        padding: 1rem 2rem;
       }
   }
 
@@ -924,12 +901,10 @@ hr {
       font-size: 30px;
     }
     .welcome-section p {
-      padding-left: 110px;
       font-size: 25px;
     }
     .welcome-section span {
       font-size: 13px;
-      margin-left: 10%;
       }
 
       #project-grid {
@@ -953,16 +928,14 @@ hr {
       font-size: 0.15rem;
     }
 
+
     .welcome-section h1 {
       font-size: 22px;
     }
     .welcome-section p {
-      padding-left: 100px;
       font-size: 16px;
     }
-    .welcome-section span {
-      margin-left: 0;
-    }
+
     .contact-title {
         font-size: 1.5rem;
     }
